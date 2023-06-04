@@ -7,6 +7,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #222;
   font-size: 120%;
+  background-size: cover;
 }
 
 .card {
@@ -65,6 +66,49 @@ h1.temp {
   align-items: center;
 }
 
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  border-top: 2px solid white;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.history {
+  padding-top: 10px;
+
+  gap: 15px;
+}
+
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
 .description {
   text-transform: capitalize;
   margin-left: 8px;
@@ -74,6 +118,13 @@ h1.temp {
   visibility: hidden;
   max-height: 20px;
   position: relative;
+}
+
+.history h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 .weather.loading:after {
