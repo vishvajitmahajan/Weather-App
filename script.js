@@ -95,7 +95,7 @@ let weather = {
     const { history } = await this.getWeatherData();
     const list = document.querySelector(".history");
     this.clearHistory(list);
-    history.filter(data=>data.cod===200).reverse().forEach((history) => {
+    history.filter(history=>history.data.cod===200).reverse().forEach((history) => {
       const { data: item, createdAt } = history;
       const date = new Date(Date.parse(createdAt)).toDateString();
       const time = new Date(Date.parse(createdAt)).toLocaleTimeString();
